@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>सफलता — प्रेरणादायक पॉडकास्ट</title>
+<meta property="og:title" content="सफलता — प्रेरणादायक पॉडकास्ट">
+<meta property="og:description" content="मेहनत, धैर्य और विश्वास पर एक प्रेरणादायक हिंदी पॉडकास्ट वीडियो।">
+<meta property="og:type" content="video.other">
+<meta property="og:image" content="poster.jpg">
+<style>
+  :root{ --bg1:#090e1c; --bg2:#141c30; --accent:#ffb020; --accent2:#56aaff;
+         --text:#f4f7fc; --muted:#aebbd0; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{ font-family:'Noto Sans Devanagari','Segoe UI',system-ui,-apple-system,sans-serif;
+        background:radial-gradient(1200px 600px at 50% -10%, #1b2745 0%, var(--bg1) 60%), var(--bg1);
+        color:var(--text); min-height:100vh; display:flex; flex-direction:column;
+        align-items:center; justify-content:center; padding:28px 18px 48px; }
+  .wrap{ width:100%; max-width:960px; }
+  .eyebrow{ color:var(--accent); letter-spacing:.14em; font-size:13px; text-transform:uppercase;
+            text-align:center; margin-bottom:10px; }
+  h1{ font-size:clamp(26px,5vw,42px); text-align:center; line-height:1.25; }
+  h1 .bar{ display:block; width:70px; height:5px; border-radius:3px; background:var(--accent);
+           margin:16px auto 0; }
+  .sub{ color:var(--muted); text-align:center; margin-top:14px; font-size:clamp(15px,2.4vw,18px); }
+  .player{ margin-top:26px; border-radius:16px; overflow:hidden; background:#000;
+           box-shadow:0 24px 60px rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.08); }
+  video{ display:block; width:100%; height:auto; background:#000; }
+  .actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:26px; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; cursor:pointer; border:0;
+        font:inherit; font-weight:600; font-size:16px; padding:14px 26px; border-radius:999px;
+        text-decoration:none; transition:transform .12s ease, box-shadow .12s ease, background .12s ease; }
+  .btn:active{ transform:translateY(1px); }
+  .btn-dl{ background:linear-gradient(135deg,#ffc24d,#f39a00); color:#20160a;
+           box-shadow:0 10px 26px rgba(255,176,32,.32); }
+  .btn-dl:hover{ box-shadow:0 14px 32px rgba(255,176,32,.45); }
+  .btn-sh{ background:rgba(255,255,255,.08); color:var(--text);
+           border:1px solid rgba(255,255,255,.18); }
+  .btn-sh:hover{ background:rgba(255,255,255,.14); }
+  svg{ width:20px; height:20px; }
+  .meta{ text-align:center; color:var(--muted); font-size:13px; margin-top:20px; }
+  .toast{ position:fixed; left:50%; bottom:28px; transform:translate(-50%,20px);
+          background:#12203a; color:var(--text); border:1px solid rgba(255,255,255,.16);
+          padding:12px 20px; border-radius:12px; font-size:14px; opacity:0; pointer-events:none;
+          transition:opacity .2s ease, transform .2s ease; }
+  .toast.show{ opacity:1; transform:translate(-50%,0); }
+  .sheet{ position:fixed; inset:0; background:rgba(4,8,18,.6); display:none;
+          align-items:flex-end; justify-content:center; padding:16px; }
+  .sheet.show{ display:flex; }
+  .sheet-inner{ background:#101a30; border:1px solid rgba(255,255,255,.14);
+                border-radius:18px; width:100%; max-width:420px; padding:18px; }
+  .sheet-inner a{ display:flex; align-items:center; gap:12px; color:var(--text);
+                  text-decoration:none; padding:14px; border-radius:12px; font-weight:600; }
+  .sheet-inner a:hover{ background:rgba(255,255,255,.07); }
+  .sheet-inner .close{ text-align:center; color:var(--muted); padding:10px; cursor:pointer;
+                       font-weight:500; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">प्रेरणादायक पॉडकास्ट</div>
+  <h1>सफलता<span class="bar"></span></h1>
+  <p class="sub">मेहनत • धैर्य • विश्वास — एक छोटी-सी कोशिश ही बड़ी सफलता बन सकती है।</p>
+
+  <div class="player">
+    <video id="vid" controls playsinline preload="metadata" poster="poster.jpg">
+      <source src="safalta_video.mp4" type="video/mp4">
+      तुमचा ब्राउझर व्हिडिओ सपोर्ट करत नाही.
+    </video>
+  </div>
+
+  <div class="actions">
+    <a class="btn btn-dl" id="dl" href="safalta_video.mp4" download="safalta_video.mp4">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+      व्हिडिओ डाउनलोड करा
+    </a>
+    <button class="btn btn-sh" id="sh" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></svg>
+      शेअर करा
+    </button>
+  </div>
+  <p class="meta">1920×1080 • हिंदी व्हॉइसओवर • ~1 मिनिट 54 सेकंद</p>
+</div>
+
+<div class="toast" id="toast">लिंक कॉपी झाली!</div>
+
+<div class="sheet" id="sheet">
+  <div class="sheet-inner">
+    <a id="wa" target="_blank" rel="noopener">WhatsApp वर शेअर करा</a>
+    <a id="tg" target="_blank" rel="noopener">Telegram वर शेअर करा</a>
+    <a id="x" target="_blank" rel="noopener">X (Twitter) वर शेअर करा</a>
+    <a id="cp" href="javascript:void(0)">लिंक कॉपी करा</a>
+    <div class="close" id="close">बंद करा</div>
+  </div>
+</div>
+
+<script>
+  const PAGE_URL = location.href.split('#')[0];
+  const TITLE = "सफलता — प्रेरणादायक पॉडकास्ट";
+  const TEXT = "मेहनत, धैर्य और विश्वास पर एक प्रेरणादायक हिंदी पॉडकास्ट वीडियो।";
+
+  function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg;
+    t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1900); }
+
+  const enc = encodeURIComponent;
+  document.getElementById('wa').href = "https://wa.me/?text=" + enc(TEXT + " " + PAGE_URL);
+  document.getElementById('tg').href = "https://t.me/share/url?url=" + enc(PAGE_URL) + "&text=" + enc(TEXT);
+  document.getElementById('x').href  = "https://twitter.com/intent/tweet?text=" + enc(TEXT) + "&url=" + enc(PAGE_URL);
+  document.getElementById('cp').onclick = async () => {
+    try { await navigator.clipboard.writeText(PAGE_URL); toast("लिंक कॉपी झाली!"); }
+    catch(e){ toast(PAGE_URL); }
+    document.getElementById('sheet').classList.remove('show');
+  };
+  document.getElementById('close').onclick = () => document.getElementById('sheet').classList.remove('show');
+  document.getElementById('sheet').addEventListener('click', e => {
+    if(e.target.id === 'sheet') e.currentTarget.classList.remove('show'); });
+
+  document.getElementById('sh').onclick = async () => {
+    if (navigator.share){
+      try { await navigator.share({ title: TITLE, text: TEXT, url: PAGE_URL }); return; }
+      catch(e){ if (e && e.name === 'AbortError') return; }
+    }
+    document.getElementById('sheet').classList.add('show');
+  };
+
+  document.getElementById('dl').addEventListener('click', () => toast("डाउनलोड सुरू होत आहे…"));
+</script>
+</body>
+</html>
